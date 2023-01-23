@@ -15,7 +15,7 @@ var loggerFactory = LoggerFactory.Create(logging =>
 });
 
 // The port number must match the port of the gRPC server.
-using var channel = GrpcChannel.ForAddress("https://KS:40125",
+using var channel = GrpcChannel.ForAddress("https://KS:40125",  //TODO Replace KS with your hostname
     new GrpcChannelOptions { LoggerFactory = loggerFactory  });
 var client = new Greeter.GreeterClient(channel);
 
