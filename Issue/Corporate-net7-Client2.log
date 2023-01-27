@@ -1,0 +1,46 @@
+12:29:46.190 dbug: Grpc.Net.Client.Internal.GrpcCall[1]
+      Starting gRPC call. Method type: 'Unary', URI: 'https://nsndevcibrweb01:40125/greet.Greeter/SayHello'.
+12:29:46.260 dbug: Grpc.Net.Client.Balancer.Subchannel[1]
+      Subchannel id '1' created with addresses: nsndevcibrweb01:40125
+12:29:46.263 trce: Grpc.Net.Client.Balancer.Subchannel[12]
+      Subchannel id '1' state changed registration '1-1' created.
+12:29:46.267 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[4]
+      Channel picker updated.
+12:29:46.270 trce: Grpc.Net.Client.Balancer.Subchannel[4]
+      Subchannel id '1' connection requested.
+12:29:46.274 dbug: Grpc.Net.Client.Balancer.Subchannel[11]
+      Subchannel id '1' state changed to Connecting. Detail: 'Connection requested.'.
+12:29:46.275 trce: Grpc.Net.Client.Balancer.Subchannel[14]
+      Subchannel id '1' executing state changed registration '1-1'.
+12:29:46.277 trce: Grpc.Net.Client.Balancer.PickFirstBalancer[1]
+      Processing subchannel id '1' state changed to Connecting. Detail: 'Connection requested.'.
+12:29:46.279 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[3]
+      Channel state updated to Connecting.
+12:29:46.283 trce: Grpc.Net.Client.Balancer.Subchannel[6]
+      Subchannel id '1' connecting to transport.
+12:29:46.316 trce: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[1]
+      Subchannel id '1' connecting socket to nsndevcibrweb01:40125.
+12:29:46.355 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[5]
+      Pick started.
+12:29:46.355 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[8]
+      Picked queued.
+12:29:46.355 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[11]
+      Waiting for a new picker.
+12:29:46.378 dbug: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[2]
+      Subchannel id '1' connected to socket nsndevcibrweb01:40125.
+12:29:46.415 dbug: Grpc.Net.Client.Balancer.Subchannel[11]
+      Subchannel id '1' state changed to Ready. Detail: 'Successfully connected to socket.'.
+12:29:46.416 trce: Grpc.Net.Client.Balancer.Subchannel[14]
+      Subchannel id '1' executing state changed registration '1-1'.
+12:29:46.416 trce: Grpc.Net.Client.Balancer.PickFirstBalancer[1]
+      Processing subchannel id '1' state changed to Ready. Detail: 'Successfully connected to socket.'.
+12:29:46.419 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[3]
+      Channel state updated to Ready.
+12:29:46.419 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[4]
+      Channel picker updated.
+12:29:46.420 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[5]
+      Pick started.
+12:29:46.420 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[6]
+      Successfully picked subchannel id '1' with address nsndevcibrweb01:40125.
+12:29:46.524 trce: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[7]
+      Subchannel id '1' creating stream for nsndevcibrweb01:40125.

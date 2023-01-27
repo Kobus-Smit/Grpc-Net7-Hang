@@ -1,0 +1,154 @@
+19:03:14.967 dbug: Grpc.Net.Client.Internal.GrpcCall[1]
+      Starting gRPC call. Method type: 'Unary', URI: 'https://ks:40125/greet.Greeter/SayHello'.
+19:03:14.987 dbug: Grpc.Net.Client.Balancer.Subchannel[1]
+      Subchannel id '1' created with addresses: ks:40125
+19:03:14.988 trce: Grpc.Net.Client.Balancer.Subchannel[12]
+      Subchannel id '1' state changed registration '1-1' created.
+19:03:14.991 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[4]
+      Channel picker updated.
+19:03:14.993 trce: Grpc.Net.Client.Balancer.Subchannel[4]
+      Subchannel id '1' connection requested.
+19:03:14.995 dbug: Grpc.Net.Client.Balancer.Subchannel[11]
+      Subchannel id '1' state changed to Connecting. Detail: 'Connection requested.'.
+19:03:14.996 trce: Grpc.Net.Client.Balancer.Subchannel[14]
+      Subchannel id '1' executing state changed registration '1-1'.
+19:03:14.996 trce: Grpc.Net.Client.Balancer.PickFirstBalancer[1]
+      Processing subchannel id '1' state changed to Connecting. Detail: 'Connection requested.'.
+19:03:14.998 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[3]
+      Channel state updated to Connecting.
+19:03:14.999 trce: Grpc.Net.Client.Balancer.Subchannel[6]
+      Subchannel id '1' connecting to transport.
+19:03:15.013 trce: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[1]
+      Subchannel id '1' connecting socket to ks:40125.
+19:03:15.038 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[5]
+      Pick started.
+19:03:15.038 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[8]
+      Picked queued.
+19:03:15.038 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[11]
+      Waiting for a new picker.
+19:03:15.552 dbug: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[2]
+      Subchannel id '1' connected to socket ks:40125.
+19:03:15.553 dbug: Grpc.Net.Client.Balancer.Subchannel[11]
+      Subchannel id '1' state changed to Ready. Detail: 'Successfully connected to socket.'.
+19:03:15.553 trce: Grpc.Net.Client.Balancer.Subchannel[14]
+      Subchannel id '1' executing state changed registration '1-1'.
+19:03:15.553 trce: Grpc.Net.Client.Balancer.PickFirstBalancer[1]
+      Processing subchannel id '1' state changed to Ready. Detail: 'Successfully connected to socket.'.
+19:03:15.553 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[3]
+      Channel state updated to Ready.
+19:03:15.553 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[4]
+      Channel picker updated.
+19:03:15.555 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[5]
+      Pick started.
+19:03:15.556 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[6]
+      Successfully picked subchannel id '1' with address ks:40125.
+19:03:15.610 trce: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[7]
+      Subchannel id '1' creating stream for ks:40125.
+19:03:15.685 dbug: Grpc.Net.Client.Internal.GrpcCall[18]
+      Sending message.
+19:03:15.700 trce: Grpc.Net.Client.Internal.GrpcCall[21]
+      Serialized 'GrpcGreeterClient.HelloRequest' to 15 byte message.
+19:03:15.703 trce: Grpc.Net.Client.Internal.GrpcCall[19]
+      Message sent.
+19:03:15.796 trce: Grpc.Net.Client.Internal.GrpcCall[2]
+      Response headers received.
+19:03:15.798 dbug: Grpc.Net.Client.Internal.GrpcCall[13]
+      Reading message.
+19:03:15.799 trce: Grpc.Net.Client.Internal.GrpcCall[15]
+      Deserializing 21 byte message to 'GrpcGreeterClient.HelloReply'.
+19:03:15.803 trce: Grpc.Net.Client.Internal.GrpcCall[16]
+      Received message.
+19:03:15.804 dbug: Grpc.Net.Client.Internal.GrpcCall[4]
+      Finished gRPC call.
+Greeting: Hello GreeterClient
+Press any key to exit...
+
+19:04:30.652 trce: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[8]
+      Subchannel id '1' disposing stream for ks:40125.
+19:04:30.654 dbug: Grpc.Net.Client.Balancer.Subchannel[11]
+      Subchannel id '1' state changed to Idle. Detail: 'Disconnected.'.
+19:04:30.654 trce: Grpc.Net.Client.Balancer.Subchannel[14]
+      Subchannel id '1' executing state changed registration '1-1'.
+19:04:30.654 trce: Grpc.Net.Client.Balancer.PickFirstBalancer[1]
+      Processing subchannel id '1' state changed to Idle. Detail: 'Disconnected.'.
+19:04:30.655 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[3]
+      Channel state updated to Idle.
+19:04:30.655 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[4]
+      Channel picker updated.
+20:16:43.600 dbug: Grpc.Net.Client.Internal.GrpcCall[1]
+      Starting gRPC call. Method type: 'Unary', URI: 'https://ks:40125/greet.Greeter/SayHello'.
+20:16:43.600 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[5]
+      Pick started.
+20:16:43.600 trce: Grpc.Net.Client.Balancer.Subchannel[4]
+      Subchannel id '1' connection requested.
+20:16:43.600 dbug: Grpc.Net.Client.Balancer.Subchannel[11]
+      Subchannel id '1' state changed to Connecting. Detail: 'Connection requested.'.
+20:16:43.600 trce: Grpc.Net.Client.Balancer.Subchannel[14]
+      Subchannel id '1' executing state changed registration '1-1'.
+20:16:43.600 trce: Grpc.Net.Client.Balancer.PickFirstBalancer[1]
+      Processing subchannel id '1' state changed to Connecting. Detail: 'Connection requested.'.
+20:16:43.600 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[3]
+      Channel state updated to Connecting.
+20:16:43.600 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[4]
+      Channel picker updated.
+20:16:43.600 trce: Grpc.Net.Client.Balancer.Subchannel[6]
+      Subchannel id '1' connecting to transport.
+20:16:43.600 trce: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[1]
+      Subchannel id '1' connecting socket to ks:40125.
+20:16:43.601 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[7]
+      Picked subchannel id '1' doesn't have a current address.
+20:16:43.601 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[5]
+      Pick started.
+20:16:43.601 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[8]
+      Picked queued.
+20:16:43.601 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[11]
+      Waiting for a new picker.
+20:16:43.607 dbug: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[2]
+      Subchannel id '1' connected to socket ks:40125.
+20:16:43.607 dbug: Grpc.Net.Client.Balancer.Subchannel[11]
+      Subchannel id '1' state changed to Ready. Detail: 'Successfully connected to socket.'.
+20:16:43.607 trce: Grpc.Net.Client.Balancer.Subchannel[14]
+      Subchannel id '1' executing state changed registration '1-1'.
+20:16:43.607 trce: Grpc.Net.Client.Balancer.PickFirstBalancer[1]
+      Processing subchannel id '1' state changed to Ready. Detail: 'Successfully connected to socket.'.
+20:16:43.607 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[3]
+      Channel state updated to Ready.
+20:16:43.607 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[4]
+      Channel picker updated.
+20:16:43.607 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[5]
+      Pick started.
+20:16:43.608 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[6]
+      Successfully picked subchannel id '1' with address ks:40125.
+20:16:43.611 trce: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[7]
+      Subchannel id '1' creating stream for ks:40125.
+20:16:43.658 dbug: Grpc.Net.Client.Internal.GrpcCall[18]
+      Sending message.
+20:16:43.659 trce: Grpc.Net.Client.Internal.GrpcCall[21]
+      Serialized 'GrpcGreeterClient.HelloRequest' to 15 byte message.
+20:16:43.661 trce: Grpc.Net.Client.Internal.GrpcCall[19]
+      Message sent.
+20:16:43.694 trce: Grpc.Net.Client.Internal.GrpcCall[2]
+      Response headers received.
+20:16:43.694 dbug: Grpc.Net.Client.Internal.GrpcCall[13]
+      Reading message.
+20:16:43.694 trce: Grpc.Net.Client.Internal.GrpcCall[15]
+      Deserializing 21 byte message to 'GrpcGreeterClient.HelloReply'.
+20:16:43.694 trce: Grpc.Net.Client.Internal.GrpcCall[16]
+      Received message.
+20:16:43.694 dbug: Grpc.Net.Client.Internal.GrpcCall[4]
+      Finished gRPC call.
+Greeting: Hello GreeterClient
+Press any key to exit...
+
+20:17:58.663 trce: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[8]
+      Subchannel id '1' disposing stream for ks:40125.
+20:17:58.664 dbug: Grpc.Net.Client.Balancer.Subchannel[11]
+      Subchannel id '1' state changed to Idle. Detail: 'Disconnected.'.
+20:17:58.664 trce: Grpc.Net.Client.Balancer.Subchannel[14]
+      Subchannel id '1' executing state changed registration '1-1'.
+20:17:58.664 trce: Grpc.Net.Client.Balancer.PickFirstBalancer[1]
+      Processing subchannel id '1' state changed to Idle. Detail: 'Disconnected.'.
+20:17:58.664 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[3]
+      Channel state updated to Idle.
+20:17:58.664 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[4]
+      Channel picker updated.

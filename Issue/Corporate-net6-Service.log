@@ -1,0 +1,391 @@
+09:50:40.507 trce: Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder[2]
+      Discovering gRPC methods for GrpcService1.Services.GreeterService.
+09:50:40.629 trce: Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder[1]
+      Added gRPC method 'SayHello' to service 'greet.Greeter'. Method type: Unary, HTTP method: POST, route pattern: '/greet.Greeter/SayHello'.
+09:50:40.767 dbug: Microsoft.Extensions.Hosting.Internal.Host[1]
+      Hosting starting
+09:50:41.063 warn: Microsoft.AspNetCore.Server.Kestrel[0]
+      Overriding address(es) 'https://localhost:7052, http://localhost:5252'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+09:50:41.087 info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://[::]:40125
+09:50:41.087 dbug: Microsoft.AspNetCore.Hosting.Diagnostics[13]
+      Loaded hosting startup assembly GrpcService1
+09:50:41.087 dbug: Microsoft.AspNetCore.Hosting.Diagnostics[13]
+      Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+09:50:41.087 dbug: Microsoft.AspNetCore.Hosting.Diagnostics[13]
+      Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+09:50:41.087 info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+09:50:41.087 info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+09:50:41.087 info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Dev\Grpc-Net7-Hang\GrpcService1\
+09:50:41.087 dbug: Microsoft.Extensions.Hosting.Internal.Host[2]
+      Hosting started
+09:51:28.666 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[39]
+      Connection id "0HMNT2QHANMJK" accepted.
+09:51:28.677 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[1]
+      Connection id "0HMNT2QHANMJK" started.
+09:51:29.398 dbug: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware[3]
+      Connection 0HMNT2QHANMJK established using the following protocol: Tls12
+09:51:29.745 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMNT2QHANMJK" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE.
+09:51:29.750 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMNT2QHANMJK" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+09:51:29.750 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMNT2QHANMJK" received SETTINGS frame for stream ID 0 with length 12 and flags NONE.
+09:51:29.751 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMNT2QHANMJK" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+09:51:29.751 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMNT2QHANMJK" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+09:51:29.763 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMNT2QHANMJK" received SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+09:51:29.763 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMNT2QHANMJK" received HEADERS frame for stream ID 1 with length 264 and flags END_HEADERS.
+09:51:29.802 info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST https://nsndevcibrweb01:40125/greet.Greeter/SayHello application/grpc -
+09:51:29.830 dbug: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware[0]
+      Wildcard detected, all requests with hosts will be allowed.
+09:51:29.832 trce: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware[2]
+      All hosts are allowed.
+09:51:29.858 dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[1001]
+      3 candidate(s) found for the request path '/greet.Greeter/SayHello'
+09:51:29.862 dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[1005]
+      Endpoint 'gRPC - /greet.Greeter/SayHello' with route pattern '/greet.Greeter/SayHello' is valid for the request path '/greet.Greeter/SayHello'
+09:51:29.865 dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[1005]
+      Endpoint 'gRPC - Unimplemented method for greet.Greeter' with route pattern 'greet.Greeter/{unimplementedMethod}' is valid for the request path '/greet.Greeter/SayHello'
+09:51:29.865 dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[1005]
+      Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/greet.Greeter/SayHello'
+09:51:29.865 dbug: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware[1]
+      Request matched endpoint 'gRPC - /greet.Greeter/SayHello'
+09:51:29.874 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMNT2QHANMJK" received DATA frame for stream ID 1 with length 20 and flags NONE.
+09:51:29.875 info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /greet.Greeter/SayHello'
+09:51:29.875 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMNT2QHANMJK" received DATA frame for stream ID 1 with length 0 and flags END_STREAM.
+09:51:29.892 dbug: Grpc.AspNetCore.Server.ServerCallHandler[10]
+      Reading message.
+09:51:29.896 dbug: Microsoft.AspNetCore.Server.Kestrel[25]
+      Connection id "0HMNT2QHANMJK", Request id "0HMNT2QHANMJK:00000001": started reading request body.
+09:51:29.897 dbug: Microsoft.AspNetCore.Server.Kestrel[26]
+      Connection id "0HMNT2QHANMJK", Request id "0HMNT2QHANMJK:00000001": done reading request body.
+09:51:29.906 trce: Grpc.AspNetCore.Server.ServerCallHandler[12]
+      Deserializing 15 byte message to 'GrpcService1.HelloRequest'.
+09:51:29.916 trce: Grpc.AspNetCore.Server.ServerCallHandler[13]
+      Received message.
+09:51:29.936 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMNT2QHANMJK" sending HEADERS frame for stream ID 1 with length 59 and flags END_HEADERS.
+09:51:29.936 dbug: Grpc.AspNetCore.Server.ServerCallHandler[15]
+      Sending message.
+09:51:29.951 trce: Grpc.AspNetCore.Server.ServerCallHandler[18]
+      Serialized 'GrpcService1.HelloReply' to 21 byte message.
+09:51:29.953 trce: Grpc.AspNetCore.Server.ServerCallHandler[16]
+      Message sent.
+09:51:29.957 info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /greet.Greeter/SayHello'
+09:51:29.958 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMNT2QHANMJK" sending DATA frame for stream ID 1 with length 26 and flags NONE.
+09:51:29.958 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMNT2QHANMJK" sending HEADERS frame for stream ID 1 with length 15 and flags END_STREAM, END_HEADERS.
+09:51:29.962 info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST https://nsndevcibrweb01:40125/greet.Greeter/SayHello application/grpc - - 200 - application/grpc 161.3155ms
+09:51:29.968 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMNT2QHANMJK" received PING frame for stream ID 0 with length 8 and flags NONE.
+09:51:29.973 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMNT2QHANMJK" sending PING frame for stream ID 0 with length 8 and flags ACK.
+09:52:44.211 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[6]
+      Connection id "0HMNT2QHANMJK" received FIN.
+09:52:44.224 dbug: Microsoft.AspNetCore.Server.Kestrel.Http2[48]
+      Connection id "0HMNT2QHANMJK" is closed. The last processed stream ID was 1.
+09:52:44.224 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[7]
+      Connection id "0HMNT2QHANMJK" sending FIN because: "The client closed the connection."
+09:52:44.232 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[2]
+      Connection id "0HMNT2QHANMJK" stopped.
+10:06:28.497 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[39]
+      Connection id "0HMNT2QHANMJL" accepted.
+10:06:28.504 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[1]
+      Connection id "0HMNT2QHANMJL" started.
+10:06:28.527 dbug: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware[3]
+      Connection 0HMNT2QHANMJL established using the following protocol: Tls
+10:06:28.527 fail: Microsoft.AspNetCore.Server.Kestrel[0]
+      HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+10:06:28.527 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[2]
+      Connection id "0HMNT2QHANMJL" stopped.
+10:06:28.528 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[7]
+      Connection id "0HMNT2QHANMJL" sending FIN because: "The Socket transport's send loop completed gracefully."
+10:07:28.041 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[39]
+      Connection id "0HMNT2QHANMJM" accepted.
+10:07:28.051 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[1]
+      Connection id "0HMNT2QHANMJM" started.
+10:07:28.081 dbug: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware[3]
+      Connection 0HMNT2QHANMJM established using the following protocol: Tls
+10:07:28.081 fail: Microsoft.AspNetCore.Server.Kestrel[0]
+      HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+10:07:28.081 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[2]
+      Connection id "0HMNT2QHANMJM" stopped.
+10:07:28.081 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[7]
+      Connection id "0HMNT2QHANMJM" sending FIN because: "The Socket transport's send loop completed gracefully."
+10:07:55.709 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[39]
+      Connection id "0HMNT2QHANMJN" accepted.
+10:07:55.710 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[1]
+      Connection id "0HMNT2QHANMJN" started.
+10:07:55.765 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[39]
+      Connection id "0HMNT2QHANMJO" accepted.
+10:07:55.765 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[1]
+      Connection id "0HMNT2QHANMJO" started.
+10:07:55.857 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[19]
+      Connection id "0HMNT2QHANMJN" reset.
+10:07:55.866 dbug: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware[1]
+      Failed to authenticate HTTPS connection.
+      System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+       ---> System.ComponentModel.Win32Exception (0x80090331): The client and server cannot communicate, because they do not possess a common algorithm.
+         --- End of inner exception stack trace ---
+         at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+         at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+10:07:55.867 dbug: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware[1]
+      Failed to authenticate HTTPS connection.
+      System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+       ---> System.ComponentModel.Win32Exception (0x80090331): The client and server cannot communicate, because they do not possess a common algorithm.
+         --- End of inner exception stack trace ---
+         at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+         at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+10:07:55.920 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[2]
+      Connection id "0HMNT2QHANMJN" stopped.
+10:07:55.920 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[2]
+      Connection id "0HMNT2QHANMJO" stopped.
+10:07:55.921 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[7]
+      Connection id "0HMNT2QHANMJO" sending FIN because: "The Socket transport's send loop completed gracefully."
+10:07:55.921 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[7]
+      Connection id "0HMNT2QHANMJN" sending FIN because: "The Socket transport's send loop completed gracefully."
+10:07:55.984 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[39]
+      Connection id "0HMNT2QHANMJP" accepted.
+10:07:55.990 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[1]
+      Connection id "0HMNT2QHANMJP" started.
+10:07:56.092 dbug: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware[1]
+      Failed to authenticate HTTPS connection.
+      System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+       ---> System.ComponentModel.Win32Exception (0x80090331): The client and server cannot communicate, because they do not possess a common algorithm.
+         --- End of inner exception stack trace ---
+         at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+         at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+10:07:56.092 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[2]
+      Connection id "0HMNT2QHANMJP" stopped.
+10:07:56.166 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[7]
+      Connection id "0HMNT2QHANMJP" sending FIN because: "The Socket transport's send loop completed gracefully."
+10:07:56.218 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[39]
+      Connection id "0HMNT2QHANMJQ" accepted.
+10:07:56.218 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[1]
+      Connection id "0HMNT2QHANMJQ" started.
+10:07:56.283 dbug: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware[1]
+      Failed to authenticate HTTPS connection.
+      System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+       ---> System.ComponentModel.Win32Exception (0x80090331): The client and server cannot communicate, because they do not possess a common algorithm.
+         --- End of inner exception stack trace ---
+         at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+         at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+10:07:56.283 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[2]
+      Connection id "0HMNT2QHANMJQ" stopped.
+10:07:56.283 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[7]
+      Connection id "0HMNT2QHANMJQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+10:07:57.294 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[39]
+      Connection id "0HMNT2QHANMJR" accepted.
+10:07:57.299 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[1]
+      Connection id "0HMNT2QHANMJR" started.
+10:07:57.374 dbug: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware[1]
+      Failed to authenticate HTTPS connection.
+      System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+       ---> System.ComponentModel.Win32Exception (0x80090331): The client and server cannot communicate, because they do not possess a common algorithm.
+         --- End of inner exception stack trace ---
+         at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+         at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+10:07:57.375 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[2]
+      Connection id "0HMNT2QHANMJR" stopped.
+10:07:57.375 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[7]
+      Connection id "0HMNT2QHANMJR" sending FIN because: "The Socket transport's send loop completed gracefully."
+10:07:58.310 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[39]
+      Connection id "0HMNT2QHANMJS" accepted.
+10:07:58.310 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[1]
+      Connection id "0HMNT2QHANMJS" started.
+10:07:59.342 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[39]
+      Connection id "0HMNT2QHANMJT" accepted.
+10:07:59.342 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[19]
+      Connection id "0HMNT2QHANMJS" reset.
+10:07:59.342 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[1]
+      Connection id "0HMNT2QHANMJT" started.
+10:07:59.494 dbug: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware[1]
+      Failed to authenticate HTTPS connection.
+      Microsoft.AspNetCore.Connections.ConnectionResetException: An existing connection was forcibly closed by the remote host.
+       ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.<GetResult>g__ThrowSocketException|5_0(SocketError e)
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.GetResult(Int16 token)
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.DoReceive()
+         --- End of inner exception stack trace ---
+         at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+         at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+         at System.IO.Pipelines.Pipe.DefaultPipeReader.GetResult(Int16 token)
+         at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.DuplexPipeStream.ReadAsyncInternal(Memory`1 destination, CancellationToken cancellationToken)
+         at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+         at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+         at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+         at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+         at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+10:07:59.497 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[2]
+      Connection id "0HMNT2QHANMJS" stopped.
+10:07:59.512 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[7]
+      Connection id "0HMNT2QHANMJS" sending FIN because: "The Socket transport's send loop completed gracefully."
+10:08:00.389 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[19]
+      Connection id "0HMNT2QHANMJT" reset.
+10:08:00.389 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[39]
+      Connection id "0HMNT2QHANMJU" accepted.
+10:08:00.389 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[1]
+      Connection id "0HMNT2QHANMJU" started.
+10:08:00.535 dbug: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware[1]
+      Failed to authenticate HTTPS connection.
+      Microsoft.AspNetCore.Connections.ConnectionResetException: An existing connection was forcibly closed by the remote host.
+       ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.<GetResult>g__ThrowSocketException|5_0(SocketError e)
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.GetResult(Int16 token)
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.DoReceive()
+         --- End of inner exception stack trace ---
+         at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+         at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+         at System.IO.Pipelines.Pipe.DefaultPipeReader.GetResult(Int16 token)
+         at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.DuplexPipeStream.ReadAsyncInternal(Memory`1 destination, CancellationToken cancellationToken)
+         at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+         at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+         at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+         at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+         at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+10:08:00.536 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[2]
+      Connection id "0HMNT2QHANMJT" stopped.
+10:08:00.538 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[7]
+      Connection id "0HMNT2QHANMJT" sending FIN because: "The Socket transport's send loop completed gracefully."
+10:08:01.487 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[19]
+      Connection id "0HMNT2QHANMJU" reset.
+10:08:01.642 dbug: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware[1]
+      Failed to authenticate HTTPS connection.
+      Microsoft.AspNetCore.Connections.ConnectionResetException: An existing connection was forcibly closed by the remote host.
+       ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.<GetResult>g__ThrowSocketException|5_0(SocketError e)
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.GetResult(Int16 token)
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.DoReceive()
+         --- End of inner exception stack trace ---
+         at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+         at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+         at System.IO.Pipelines.Pipe.DefaultPipeReader.GetResult(Int16 token)
+         at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.DuplexPipeStream.ReadAsyncInternal(Memory`1 destination, CancellationToken cancellationToken)
+         at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+         at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+         at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+         at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+         at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+10:08:01.643 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[2]
+      Connection id "0HMNT2QHANMJU" stopped.
+10:08:01.644 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[7]
+      Connection id "0HMNT2QHANMJU" sending FIN because: "The Socket transport's send loop completed gracefully."
+10:08:06.600 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[39]
+      Connection id "0HMNT2QHANMJV" accepted.
+10:08:06.601 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[1]
+      Connection id "0HMNT2QHANMJV" started.
+10:08:07.628 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[19]
+      Connection id "0HMNT2QHANMJV" reset.
+10:08:07.776 dbug: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware[1]
+      Failed to authenticate HTTPS connection.
+      Microsoft.AspNetCore.Connections.ConnectionResetException: An existing connection was forcibly closed by the remote host.
+       ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.<GetResult>g__ThrowSocketException|5_0(SocketError e)
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.GetResult(Int16 token)
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.DoReceive()
+         --- End of inner exception stack trace ---
+         at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+         at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+         at System.IO.Pipelines.Pipe.DefaultPipeReader.GetResult(Int16 token)
+         at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.DuplexPipeStream.ReadAsyncInternal(Memory`1 destination, CancellationToken cancellationToken)
+         at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+         at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+         at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+         at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+         at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+10:08:07.778 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[2]
+      Connection id "0HMNT2QHANMJV" stopped.
+10:08:07.778 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[7]
+      Connection id "0HMNT2QHANMJV" sending FIN because: "The Socket transport's send loop completed gracefully."
+11:18:26.025 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[39]
+      Connection id "0HMNT2QHANMK0" accepted.
+11:18:26.063 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[1]
+      Connection id "0HMNT2QHANMK0" started.
+11:18:26.074 dbug: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware[3]
+      Connection 0HMNT2QHANMK0 established using the following protocol: Tls12
+11:18:26.078 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMNT2QHANMK0" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE.
+11:18:26.078 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMNT2QHANMK0" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+11:18:26.078 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMNT2QHANMK0" received SETTINGS frame for stream ID 0 with length 12 and flags NONE.
+11:18:26.078 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMNT2QHANMK0" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+11:18:26.078 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMNT2QHANMK0" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+11:18:26.101 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMNT2QHANMK0" received HEADERS frame for stream ID 1 with length 264 and flags END_HEADERS.
+11:18:26.102 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMNT2QHANMK0" received DATA frame for stream ID 1 with length 20 and flags NONE.
+11:18:26.102 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMNT2QHANMK0" received SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+11:18:26.102 info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST https://nsndevcibrweb01:40125/greet.Greeter/SayHello application/grpc -
+11:18:26.102 trce: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware[2]
+      All hosts are allowed.
+11:18:26.103 dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[1001]
+      3 candidate(s) found for the request path '/greet.Greeter/SayHello'
+11:18:26.103 dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[1005]
+      Endpoint 'gRPC - /greet.Greeter/SayHello' with route pattern '/greet.Greeter/SayHello' is valid for the request path '/greet.Greeter/SayHello'
+11:18:26.103 dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[1005]
+      Endpoint 'gRPC - Unimplemented method for greet.Greeter' with route pattern 'greet.Greeter/{unimplementedMethod}' is valid for the request path '/greet.Greeter/SayHello'
+11:18:26.103 dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[1005]
+      Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/greet.Greeter/SayHello'
+11:18:26.103 dbug: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware[1]
+      Request matched endpoint 'gRPC - /greet.Greeter/SayHello'
+11:18:26.103 info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /greet.Greeter/SayHello'
+11:18:26.103 dbug: Grpc.AspNetCore.Server.ServerCallHandler[10]
+      Reading message.
+11:18:26.103 dbug: Microsoft.AspNetCore.Server.Kestrel[25]
+      Connection id "0HMNT2QHANMK0", Request id "0HMNT2QHANMK0:00000001": started reading request body.
+11:18:26.103 trce: Grpc.AspNetCore.Server.ServerCallHandler[12]
+      Deserializing 15 byte message to 'GrpcService1.HelloRequest'.
+11:18:26.103 trce: Grpc.AspNetCore.Server.ServerCallHandler[13]
+      Received message.
+11:18:26.141 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMNT2QHANMK0" received DATA frame for stream ID 1 with length 0 and flags END_STREAM.
+11:18:26.142 dbug: Microsoft.AspNetCore.Server.Kestrel[26]
+      Connection id "0HMNT2QHANMK0", Request id "0HMNT2QHANMK0:00000001": done reading request body.
+11:18:26.148 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMNT2QHANMK0" sending HEADERS frame for stream ID 1 with length 59 and flags END_HEADERS.
+11:18:26.148 dbug: Grpc.AspNetCore.Server.ServerCallHandler[15]
+      Sending message.
+11:18:26.148 trce: Grpc.AspNetCore.Server.ServerCallHandler[18]
+      Serialized 'GrpcService1.HelloReply' to 21 byte message.
+11:18:26.148 trce: Grpc.AspNetCore.Server.ServerCallHandler[16]
+      Message sent.
+11:18:26.151 info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /greet.Greeter/SayHello'
+11:18:26.156 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMNT2QHANMK0" sending DATA frame for stream ID 1 with length 26 and flags NONE.
+11:18:26.156 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMNT2QHANMK0" sending HEADERS frame for stream ID 1 with length 15 and flags END_STREAM, END_HEADERS.
+11:18:26.156 info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST https://nsndevcibrweb01:40125/greet.Greeter/SayHello application/grpc - - 200 - application/grpc 53.8901ms
+11:18:26.164 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMNT2QHANMK0" received PING frame for stream ID 0 with length 8 and flags NONE.
+11:18:26.164 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMNT2QHANMK0" sending PING frame for stream ID 0 with length 8 and flags ACK.
+11:19:41.087 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[6]
+      Connection id "0HMNT2QHANMK0" received FIN.
+11:19:41.123 dbug: Microsoft.AspNetCore.Server.Kestrel.Http2[48]
+      Connection id "0HMNT2QHANMK0" is closed. The last processed stream ID was 1.
+11:19:41.126 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[7]
+      Connection id "0HMNT2QHANMK0" sending FIN because: "The client closed the connection."
+11:19:41.126 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[2]
+      Connection id "0HMNT2QHANMK0" stopped.
