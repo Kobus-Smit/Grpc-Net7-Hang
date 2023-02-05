@@ -1,0 +1,142 @@
+06:09:54.227 dbug: Grpc.Net.Client.Internal.GrpcCall[1]
+      Starting gRPC call. Method type: 'Unary', URI: 'https://nsndevcibrweb01:40125/greet.Greeter/SayHello'.
+06:09:54.264 dbug: Grpc.Net.Client.Balancer.Subchannel[1]
+      Subchannel id '1' created with addresses: nsndevcibrweb01:40125
+06:09:54.267 trce: Grpc.Net.Client.Balancer.Subchannel[12]
+      Subchannel id '1' state changed registration '1-1' created.
+06:09:54.272 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[4]
+      Channel picker updated.
+06:09:54.275 trce: Grpc.Net.Client.Balancer.Subchannel[4]
+      Subchannel id '1' connection requested.
+06:09:54.280 dbug: Grpc.Net.Client.Balancer.Subchannel[11]
+      Subchannel id '1' state changed to Connecting. Detail: 'Connection requested.'.
+06:09:54.281 trce: Grpc.Net.Client.Balancer.Subchannel[14]
+      Subchannel id '1' executing state changed registration '1-1'.
+06:09:54.282 trce: Grpc.Net.Client.Balancer.PickFirstBalancer[1]
+      Processing subchannel id '1' state changed to Connecting. Detail: 'Connection requested.'.
+06:09:54.285 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[3]
+      Channel state updated to Connecting.
+06:09:54.289 trce: Grpc.Net.Client.Balancer.Subchannel[6]
+      Subchannel id '1' connecting to transport.
+06:09:54.321 trce: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[1]
+      Subchannel id '1' connecting socket to nsndevcibrweb01:40125.
+06:09:54.363 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[5]
+      Pick started.
+06:09:54.363 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[8]
+      Picked queued.
+06:09:54.363 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[11]
+      Waiting for a new picker.
+06:09:54.386 dbug: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[2]
+      Subchannel id '1' connected to socket nsndevcibrweb01:40125.
+06:09:54.387 dbug: Grpc.Net.Client.Balancer.Subchannel[11]
+      Subchannel id '1' state changed to Ready. Detail: 'Successfully connected to socket.'.
+06:09:54.387 trce: Grpc.Net.Client.Balancer.Subchannel[14]
+      Subchannel id '1' executing state changed registration '1-1'.
+06:09:54.387 trce: Grpc.Net.Client.Balancer.PickFirstBalancer[1]
+      Processing subchannel id '1' state changed to Ready. Detail: 'Successfully connected to socket.'.
+06:09:54.393 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[3]
+      Channel state updated to Ready.
+06:09:54.393 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[4]
+      Channel picker updated.
+06:09:54.394 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[5]
+      Pick started.
+06:09:54.394 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[6]
+      Successfully picked subchannel id '1' with address nsndevcibrweb01:40125.
+06:09:54.573 trce: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[7]
+      Subchannel id '1' creating stream for nsndevcibrweb01:40125.
+06:09:54.725 dbug: Grpc.Net.Client.Internal.GrpcCall[18]
+      Sending message.
+06:09:54.757 trce: Grpc.Net.Client.Internal.GrpcCall[21]
+      Serialized 'GrpcGreeterClient.HelloRequest' to 15 byte message.
+06:09:54.763 trce: Grpc.Net.Client.Internal.GrpcCall[19]
+      Message sent.
+06:09:54.947 trce: Grpc.Net.Client.Internal.GrpcCall[2]
+      Response headers received.
+06:09:54.951 dbug: Grpc.Net.Client.Internal.GrpcCall[13]
+      Reading message.
+06:09:54.954 trce: Grpc.Net.Client.Internal.GrpcCall[15]
+      Deserializing 21 byte message to 'GrpcGreeterClient.HelloReply'.
+06:09:54.960 trce: Grpc.Net.Client.Internal.GrpcCall[16]
+      Received message.
+06:09:54.963 dbug: Grpc.Net.Client.Internal.GrpcCall[4]
+      Finished gRPC call.
+Greeting: Hello GreeterClient
+Press any key to exit...
+
+06:14:44.613 trce: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[8]
+      Subchannel id '1' disposing stream for nsndevcibrweb01:40125.
+06:14:44.613 dbug: Grpc.Net.Client.Balancer.Subchannel[11]
+      Subchannel id '1' state changed to Idle. Detail: 'Disconnected.'.
+06:14:44.613 trce: Grpc.Net.Client.Balancer.Subchannel[14]
+      Subchannel id '1' executing state changed registration '1-1'.
+06:14:44.613 trce: Grpc.Net.Client.Balancer.PickFirstBalancer[1]
+      Processing subchannel id '1' state changed to Idle. Detail: 'Disconnected.'.
+06:14:44.614 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[3]
+      Channel state updated to Idle.
+06:14:44.614 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[4]
+      Channel picker updated.
+07:32:17.421 dbug: Grpc.Net.Client.Internal.GrpcCall[1]
+      Starting gRPC call. Method type: 'Unary', URI: 'https://nsndevcibrweb01:40125/greet.Greeter/SayHello'.
+07:32:17.422 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[5]
+      Pick started.
+07:32:17.422 trce: Grpc.Net.Client.Balancer.Subchannel[4]
+      Subchannel id '1' connection requested.
+07:32:17.422 dbug: Grpc.Net.Client.Balancer.Subchannel[11]
+      Subchannel id '1' state changed to Connecting. Detail: 'Connection requested.'.
+07:32:17.422 trce: Grpc.Net.Client.Balancer.Subchannel[14]
+      Subchannel id '1' executing state changed registration '1-1'.
+07:32:17.422 trce: Grpc.Net.Client.Balancer.PickFirstBalancer[1]
+      Processing subchannel id '1' state changed to Connecting. Detail: 'Connection requested.'.
+07:32:17.422 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[3]
+      Channel state updated to Connecting.
+07:32:17.422 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[4]
+      Channel picker updated.
+07:32:17.422 trce: Grpc.Net.Client.Balancer.Subchannel[6]
+      Subchannel id '1' connecting to transport.
+07:32:17.422 trce: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[1]
+      Subchannel id '1' connecting socket to nsndevcibrweb01:40125.
+07:32:17.424 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[7]
+      Picked subchannel id '1' doesn't have a current address.
+07:32:17.424 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[5]
+      Pick started.
+07:32:17.424 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[8]
+      Picked queued.
+07:32:17.424 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[11]
+      Waiting for a new picker.
+07:32:17.444 dbug: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[2]
+      Subchannel id '1' connected to socket nsndevcibrweb01:40125.
+07:32:17.445 dbug: Grpc.Net.Client.Balancer.Subchannel[11]
+      Subchannel id '1' state changed to Ready. Detail: 'Successfully connected to socket.'.
+07:32:17.445 trce: Grpc.Net.Client.Balancer.Subchannel[14]
+      Subchannel id '1' executing state changed registration '1-1'.
+07:32:17.445 trce: Grpc.Net.Client.Balancer.PickFirstBalancer[1]
+      Processing subchannel id '1' state changed to Ready. Detail: 'Successfully connected to socket.'.
+07:32:17.445 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[3]
+      Channel state updated to Ready.
+07:32:17.445 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[4]
+      Channel picker updated.
+07:32:17.445 trce: Grpc.Net.Client.Balancer.Internal.ConnectionManager[5]
+      Pick started.
+07:32:17.445 dbug: Grpc.Net.Client.Balancer.Internal.ConnectionManager[6]
+      Successfully picked subchannel id '1' with address nsndevcibrweb01:40125.
+07:32:17.447 trce: Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport[7]
+      Subchannel id '1' creating stream for nsndevcibrweb01:40125.
+07:32:17.478 dbug: Grpc.Net.Client.Internal.GrpcCall[18]
+      Sending message.
+07:32:17.478 trce: Grpc.Net.Client.Internal.GrpcCall[21]
+      Serialized 'GrpcGreeterClient.HelloRequest' to 15 byte message.
+07:32:17.478 trce: Grpc.Net.Client.Internal.GrpcCall[19]
+      Message sent.
+07:32:17.502 trce: Grpc.Net.Client.Internal.GrpcCall[2]
+      Response headers received.
+07:32:17.502 dbug: Grpc.Net.Client.Internal.GrpcCall[13]
+      Reading message.
+07:32:17.502 trce: Grpc.Net.Client.Internal.GrpcCall[15]
+      Deserializing 21 byte message to 'GrpcGreeterClient.HelloReply'.
+Greeting: Hello GreeterClient
+Press any key to exit...
+
+07:32:17.502 trce: Grpc.Net.Client.Internal.GrpcCall[16]
+      Received message.
+07:32:17.503 dbug: Grpc.Net.Client.Internal.GrpcCall[4]
+      Finished gRPC call.

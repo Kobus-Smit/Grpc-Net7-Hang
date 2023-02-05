@@ -1,0 +1,215 @@
+06:09:48.861 trce: Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder[2]
+      Discovering gRPC methods for GrpcService1.Services.GreeterService.
+06:09:48.906 trce: Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder[1]
+      Added gRPC method 'SayHello' to service 'greet.Greeter'. Method type: Unary, HTTP method: POST, route pattern: '/greet.Greeter/SayHello'.
+06:09:49.011 dbug: Microsoft.Extensions.Hosting.Internal.Host[1]
+      Hosting starting
+06:09:49.196 warn: Microsoft.AspNetCore.Server.Kestrel[0]
+      Overriding address(es) 'https://localhost:7052, http://localhost:5252'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+06:09:49.222 info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://[::]:40125
+06:09:49.222 dbug: Microsoft.AspNetCore.Hosting.Diagnostics[13]
+      Loaded hosting startup assembly GrpcService1
+06:09:49.222 dbug: Microsoft.AspNetCore.Hosting.Diagnostics[13]
+      Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+06:09:49.222 dbug: Microsoft.AspNetCore.Hosting.Diagnostics[13]
+      Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+06:09:49.223 info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+06:09:49.223 info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+06:09:49.223 info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\ADM323630\Desktop\Grpc-Net7-Hang\GrpcService1\
+06:09:49.223 dbug: Microsoft.Extensions.Hosting.Internal.Host[2]
+      Hosting started
+06:09:54.886 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[39]
+      Connection id "0HMO75RB59I4S" accepted.
+06:09:54.887 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[1]
+      Connection id "0HMO75RB59I4S" started.
+06:09:55.159 dbug: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware[3]
+      Connection 0HMO75RB59I4S established using the following protocol: Tls12
+06:09:55.209 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4S" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE.
+06:09:55.214 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4S" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+06:09:55.214 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4S" received SETTINGS frame for stream ID 0 with length 12 and flags NONE.
+06:09:55.215 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4S" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+06:09:55.215 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4S" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+06:09:55.237 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4S" received HEADERS frame for stream ID 1 with length 262 and flags END_HEADERS.
+06:09:55.261 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4S" received SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+06:09:55.261 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4S" received DATA frame for stream ID 1 with length 20 and flags NONE.
+06:09:55.262 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4S" received DATA frame for stream ID 1 with length 0 and flags END_STREAM.
+06:09:55.273 info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST https://nsndevcibrweb01:40125/greet.Greeter/SayHello application/grpc -
+06:09:55.299 dbug: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware[0]
+      Wildcard detected, all requests with hosts will be allowed.
+06:09:55.301 trce: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware[2]
+      All hosts are allowed.
+06:09:55.328 dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[1001]
+      3 candidate(s) found for the request path '/greet.Greeter/SayHello'
+06:09:55.332 dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[1005]
+      Endpoint 'gRPC - /greet.Greeter/SayHello' with route pattern '/greet.Greeter/SayHello' is valid for the request path '/greet.Greeter/SayHello'
+06:09:55.334 dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[1005]
+      Endpoint 'gRPC - Unimplemented method for greet.Greeter' with route pattern 'greet.Greeter/{unimplementedMethod}' is valid for the request path '/greet.Greeter/SayHello'
+06:09:55.334 dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[1005]
+      Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/greet.Greeter/SayHello'
+06:09:55.335 dbug: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware[1]
+      Request matched endpoint 'gRPC - /greet.Greeter/SayHello'
+06:09:55.344 info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /greet.Greeter/SayHello'
+06:09:55.360 dbug: Grpc.AspNetCore.Server.ServerCallHandler[10]
+      Reading message.
+06:09:55.364 dbug: Microsoft.AspNetCore.Server.Kestrel[25]
+      Connection id "0HMO75RB59I4S", Request id "0HMO75RB59I4S:00000001": started reading request body.
+06:09:55.366 dbug: Microsoft.AspNetCore.Server.Kestrel[26]
+      Connection id "0HMO75RB59I4S", Request id "0HMO75RB59I4S:00000001": done reading request body.
+06:09:55.373 trce: Grpc.AspNetCore.Server.ServerCallHandler[12]
+      Deserializing 15 byte message to 'GrpcService1.HelloRequest'.
+06:09:55.382 trce: Grpc.AspNetCore.Server.ServerCallHandler[13]
+      Received message.
+06:09:55.402 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4S" sending HEADERS frame for stream ID 1 with length 59 and flags END_HEADERS.
+06:09:55.402 dbug: Grpc.AspNetCore.Server.ServerCallHandler[15]
+      Sending message.
+06:09:55.414 trce: Grpc.AspNetCore.Server.ServerCallHandler[18]
+      Serialized 'GrpcService1.HelloReply' to 21 byte message.
+06:09:55.416 trce: Grpc.AspNetCore.Server.ServerCallHandler[16]
+      Message sent.
+06:09:55.420 info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /greet.Greeter/SayHello'
+06:09:55.421 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4S" sending DATA frame for stream ID 1 with length 26 and flags NONE.
+06:09:55.421 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4S" sending HEADERS frame for stream ID 1 with length 15 and flags END_STREAM, END_HEADERS.
+06:09:55.426 info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST https://nsndevcibrweb01:40125/greet.Greeter/SayHello application/grpc - - 200 - application/grpc 154.2573ms
+06:09:55.429 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4S" received PING frame for stream ID 0 with length 8 and flags NONE.
+06:09:55.431 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4S" sending PING frame for stream ID 0 with length 8 and flags ACK.
+06:11:02.410 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4S" received PING frame for stream ID 0 with length 8 and flags NONE.
+06:11:02.413 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4S" sending PING frame for stream ID 0 with length 8 and flags ACK.
+06:12:09.913 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4S" received PING frame for stream ID 0 with length 8 and flags NONE.
+06:12:09.913 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4S" sending PING frame for stream ID 0 with length 8 and flags ACK.
+06:13:17.415 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4S" received PING frame for stream ID 0 with length 8 and flags NONE.
+06:13:17.415 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4S" sending PING frame for stream ID 0 with length 8 and flags ACK.
+06:14:24.925 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4S" received PING frame for stream ID 0 with length 8 and flags NONE.
+06:14:24.925 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4S" sending PING frame for stream ID 0 with length 8 and flags ACK.
+06:14:44.955 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[14]
+      Connection id "0HMO75RB59I4S" communication error.
+      System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.<GetResult>g__ThrowSocketException|5_0(SocketError e)
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.GetResult(Int16 token)
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.DoReceive()
+06:14:45.013 dbug: Microsoft.AspNetCore.Server.Kestrel.Http2[48]
+      Connection id "0HMO75RB59I4S" is closed. The last processed stream ID was 1.
+06:14:45.021 dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[7]
+      Connection id "0HMO75RB59I4S" sending FIN because: "The client closed the connection."
+06:14:45.163 dbug: Microsoft.AspNetCore.Server.Kestrel.BadRequests[20]
+      Connection id "0HMO75RB59I4S" request processing ended abnormally.
+      System.IO.IOException: The read operation failed, see inner exception.
+       ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.<GetResult>g__ThrowSocketException|5_0(SocketError e)
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.GetResult(Int16 token)
+         at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.DoReceive()
+         at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+         at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+         at System.IO.Pipelines.Pipe.DefaultPipeReader.GetResult(Int16 token)
+         at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.DuplexPipeStream.ReadAsyncInternal(Memory`1 destination, CancellationToken cancellationToken)
+         at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+         at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+         --- End of inner exception stack trace ---
+         at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+         at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+         at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http2.Http2Connection.ReadInputAsync()
+         at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+         at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+         at System.IO.Pipelines.Pipe.DefaultPipeReader.GetResult(Int16 token)
+         at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http2.Http2Connection.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+06:14:45.175 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[2]
+      Connection id "0HMO75RB59I4S" stopped.
+07:32:18.009 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[39]
+      Connection id "0HMO75RB59I4T" accepted.
+07:32:18.016 dbug: Microsoft.AspNetCore.Server.Kestrel.Connections[1]
+      Connection id "0HMO75RB59I4T" started.
+07:32:18.030 dbug: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware[3]
+      Connection 0HMO75RB59I4T established using the following protocol: Tls12
+07:32:18.031 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4T" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE.
+07:32:18.031 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4T" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+07:32:18.031 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4T" received SETTINGS frame for stream ID 0 with length 12 and flags NONE.
+07:32:18.031 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4T" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+07:32:18.031 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4T" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+07:32:18.040 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4T" received HEADERS frame for stream ID 1 with length 262 and flags END_HEADERS.
+07:32:18.040 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4T" received SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+07:32:18.041 info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST https://nsndevcibrweb01:40125/greet.Greeter/SayHello application/grpc -
+07:32:18.041 trce: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware[2]
+      All hosts are allowed.
+07:32:18.041 dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[1001]
+      3 candidate(s) found for the request path '/greet.Greeter/SayHello'
+07:32:18.041 dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[1005]
+      Endpoint 'gRPC - /greet.Greeter/SayHello' with route pattern '/greet.Greeter/SayHello' is valid for the request path '/greet.Greeter/SayHello'
+07:32:18.041 dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[1005]
+      Endpoint 'gRPC - Unimplemented method for greet.Greeter' with route pattern 'greet.Greeter/{unimplementedMethod}' is valid for the request path '/greet.Greeter/SayHello'
+07:32:18.041 dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[1005]
+      Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/greet.Greeter/SayHello'
+07:32:18.041 dbug: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware[1]
+      Request matched endpoint 'gRPC - /greet.Greeter/SayHello'
+07:32:18.041 info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /greet.Greeter/SayHello'
+07:32:18.041 dbug: Grpc.AspNetCore.Server.ServerCallHandler[10]
+      Reading message.
+07:32:18.041 dbug: Microsoft.AspNetCore.Server.Kestrel[25]
+      Connection id "0HMO75RB59I4T", Request id "0HMO75RB59I4T:00000001": started reading request body.
+07:32:18.043 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4T" received DATA frame for stream ID 1 with length 20 and flags NONE.
+07:32:18.043 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4T" received DATA frame for stream ID 1 with length 0 and flags END_STREAM.
+07:32:18.049 dbug: Microsoft.AspNetCore.Server.Kestrel[26]
+      Connection id "0HMO75RB59I4T", Request id "0HMO75RB59I4T:00000001": done reading request body.
+07:32:18.055 trce: Grpc.AspNetCore.Server.ServerCallHandler[12]
+      Deserializing 15 byte message to 'GrpcService1.HelloRequest'.
+07:32:18.055 trce: Grpc.AspNetCore.Server.ServerCallHandler[13]
+      Received message.
+07:32:18.056 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4T" sending HEADERS frame for stream ID 1 with length 59 and flags END_HEADERS.
+07:32:18.056 dbug: Grpc.AspNetCore.Server.ServerCallHandler[15]
+      Sending message.
+07:32:18.056 trce: Grpc.AspNetCore.Server.ServerCallHandler[18]
+      Serialized 'GrpcService1.HelloReply' to 21 byte message.
+07:32:18.056 trce: Grpc.AspNetCore.Server.ServerCallHandler[16]
+      Message sent.
+07:32:18.057 info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /greet.Greeter/SayHello'
+07:32:18.057 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4T" sending DATA frame for stream ID 1 with length 26 and flags NONE.
+07:32:18.057 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4T" sending HEADERS frame for stream ID 1 with length 15 and flags END_STREAM, END_HEADERS.
+07:32:18.057 info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST https://nsndevcibrweb01:40125/greet.Greeter/SayHello application/grpc - - 200 - application/grpc 16.4996ms
+07:32:18.067 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[37]
+      Connection id "0HMO75RB59I4T" received PING frame for stream ID 0 with length 8 and flags NONE.
+07:32:18.067 trce: Microsoft.AspNetCore.Server.Kestrel.Http2[49]
+      Connection id "0HMO75RB59I4T" sending PING frame for stream ID 0 with length 8 and flags ACK.
