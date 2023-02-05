@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Grpc.Net.Client;
+﻿using Grpc.Net.Client;
 using GrpcGreeterClient;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
@@ -14,9 +13,22 @@ var loggerFactory = LoggerFactory.Create(logging =>
     });
 });
 
+var handler = new SocketsHttpHandler
+{
+    PooledConnectionIdleTimeout = Timeout.InfiniteTimeSpan,
+    KeepAlivePingDelay = TimeSpan.FromSeconds(60),
+    KeepAlivePingTimeout = TimeSpan.FromSeconds(30),
+    EnableMultipleHttp2Connections = true
+};
+
 // The port number must match the port of the gRPC server.
-using var channel = GrpcChannel.ForAddress("https://KS:40125",  //TODO Replace KS with your hostname
-    new GrpcChannelOptions { LoggerFactory = loggerFactory  });
+using var channel = GrpcChannel.ForAddress("https://KS:40125", //TODO Replace KS with your hostname
+    new GrpcChannelOptions
+    {
+        HttpHandler = handler,
+        LoggerFactory = loggerFactory
+    });
+
 var client = new Greeter.GreeterClient(channel);
 
 while (true)
