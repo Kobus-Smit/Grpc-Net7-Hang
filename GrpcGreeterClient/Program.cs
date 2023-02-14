@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Grpc.Net.Client;
+using Grpc.Tests.Shared;
 using GrpcGreeterClient;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
@@ -13,6 +14,7 @@ var loggerFactory = LoggerFactory.Create(logging =>
         options.ColorBehavior = LoggerColorBehavior.Enabled;
     });
 });
+using var httpEventSource = new HttpEventSourceListener(loggerFactory);
 
 // The port number must match the port of the gRPC server.
 using var channel = GrpcChannel.ForAddress("https://KS:40125",  //TODO Replace KS with your hostname
